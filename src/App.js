@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import Search from './Components/Search/Search';
 
 function App(){
 
@@ -7,7 +8,7 @@ function App(){
 
   return (
     <div className="App">
-      <h1>Hi, React!</h1>
+      <Search />
     </div>
   );
   
