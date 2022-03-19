@@ -1,0 +1,32 @@
+.Search{
+    &__list{
+        width: calc(50vw - 17px);
+        margin: 0 auto;
+        background: #dadada;
+        position: relative;
+        left: -8.5px;
+        &::after{
+            display: block;
+            content: "";
+            width: 100%;
+            height: 5px;
+            border-radius: 0 0 45px 0;
+            width: calc(50vw - 17px);
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(157,78,194,1) 0%, rgba(255,255,0,1) 35%);
+        }
+    }
+    &__item{
+        background: #adaada;
+        padding: 5px 20px;
+        border-bottom: 1px solid #666;
+    }
+}
+
+.item{
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+}

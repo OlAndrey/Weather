@@ -1,0 +1,30 @@
+.Search__list {
+  width: calc(50vw - 17px);
+  margin: 0 auto;
+  background: #dadada;
+  position: relative;
+  left: -8.5px;
+}
+
+.Search__list::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 0 0 45px 0;
+  width: calc(50vw - 17px);
+  background: linear-gradient(180deg, #020024 0%, #9d4ec2 0%, yellow 35%);
+}
+
+.Search__item {
+  background: #adaada;
+  padding: 5px 20px;
+  border-bottom: 1px solid #666;
+}
+
+.item__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
