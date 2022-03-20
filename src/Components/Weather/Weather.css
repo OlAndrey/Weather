@@ -1,0 +1,16 @@
+.Weather__main {
+  padding: 30px 0;
+  font-weight: 700;
+  font-size: 30px;
+  transform: scale(3);
+  text-shadow: 0px 3px 3px #555;
+}
+
+.Weather__sky {
+  font-size: 24px;
+  text-shadow: 0px 3px 3px #555;
+}
+
+.Weather__temp {
+  font-size: 20px;
+}

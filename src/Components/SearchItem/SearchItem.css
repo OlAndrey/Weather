@@ -19,7 +19,15 @@
 .Search__item {
   background: #adaada;
   padding: 5px 20px;
+  color: #444;
   border-bottom: 1px solid #666;
+  cursor: pointer;
+  transition: all .8s ease;
+}
+
+.Search__item:hover {
+  background: #9797bb;
+  color: #000;
 }
 
 .item__block {
