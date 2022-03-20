@@ -1,5 +1,6 @@
 .Weather__main {
-  padding: 30px 0;
+  max-width: 33vw;
+  margin: 30px auto;
   font-weight: 700;
   font-size: 30px;
   transform: scale(3);

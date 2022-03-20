@@ -5,7 +5,7 @@ function SearchItem(props){
 
 
     return(
-        <li className="Search__item item" onClick={props.click}>
+        <li className="Search__item item" onClick={() => props.click(props.item)}>
             <div className="item__block">
                 <span className="item__span">{props.item.name}</span>
                 <span className="item__span">{`${props.item.country}${(props.item.state) ? `,  ${props.item.state}` : ""}`}</span>
