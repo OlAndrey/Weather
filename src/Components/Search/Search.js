@@ -6,7 +6,7 @@ function Search(props){
   return (
     <div className="Search">
       <form className="Search__form">
-        <input  onChange={props.func} type="text" className="Search__input" />
+        <input  onChange={props.func} type="text" className="Search__input" placeholder='Enter city' />
         <button type="submit" className="Search__btn">Submit</button>
       </form>
     </div>

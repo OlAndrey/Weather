@@ -42,3 +42,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background: linear-gradient(0deg, rgba(70,0,100,1) 0%, rgba(120,0,175,1) 100%);
+}

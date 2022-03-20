@@ -20,6 +20,10 @@
   background: #9d4ec2;
 }
 
+.Search__input::placeholder {
+  color: #bbb;
+}
+
 .Search__btn {
   flex: 20% 0 1;
   border-radius: 0 0 20px 0;
@@ -42,5 +46,5 @@
   height: 5px;
   border-radius: 0 0 45px 0;
   width: calc(50vw - 17px);
-  background: linear-gradient(180deg, #020024 0%, #9d4ec2 0%, yellow 35%);
+  background: linear-gradient(180deg, #9d4ec2 0%, yellow 35%);
 }

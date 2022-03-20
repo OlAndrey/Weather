@@ -1,0 +1,13 @@
+.Title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Title__main {
+  font-size: 26px;
+  color: #dadada;
+}
+
+.Title__subtitle {
+  font-size: 18px;
+  color: #dadada;
+}
