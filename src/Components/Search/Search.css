@@ -1,6 +1,5 @@
 .Search {
-  width: 50vw;
-  margin: 0 auto;
+  margin: 0 10px;
   box-shadow: 0px 0px #000;
 }
 
@@ -14,8 +13,8 @@
   flex: 50% 1 1;
   border-radius: 15px 0 0 0;
   border: 0;
-  padding: 5px 0 5px 20px;
-  font-size: 20px;
+  padding: 5px 0 5px .8em;
+  font-size: calc(16px + (10 * 0.75) *((100vw - 320px) / 1280));
   color: #fff;
   background: #9d4ec2;
 }
@@ -29,7 +28,7 @@
   border-radius: 0 0 20px 0;
   padding: 5px 15px 5px 0;
   border: 0;
-  font-size: 20px;
+  font-size: calc(16px + (10 * 0.75) *((100vw - 320px) / 1280));
   color: #fff;
   background: #9d4ec2;
   transition: all .8s ease;
@@ -47,4 +46,11 @@
   border-radius: 0 0 45px 0;
   width: calc(50vw - 17px);
   background: linear-gradient(180deg, #9d4ec2 0%, yellow 35%);
+}
+
+@media (min-width: 767px) {
+  .Search {
+    width: 50vw;
+    margin: 0 auto;
+  }
 }

@@ -1,11 +1,13 @@
 .Title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 7vh 0;
     &__main{
-        font-size: 26px;
+        margin: 1vh 0;
+        font-size: calc(20px + (16 *((100vw - 320px) / 1280)));
+        // font-size: 4em;
         color: #dadada;
     }
     &__subtitle{
-        font-size: 18px;
+        font-size: calc(16px + (10 * 0.75) *((100vw - 320px) / 1280));
         color: #dadada;
 
     }

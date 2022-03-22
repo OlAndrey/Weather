@@ -1,17 +1,18 @@
 .Weather__main {
   max-width: 33vw;
-  margin: 30px auto;
+  margin: 13vh auto;
   font-weight: 700;
-  font-size: 30px;
+  font-size: calc(30px + (16 + (16 * 0.75)) *((100vw - 320px) / 1280));
   transform: scale(3);
   text-shadow: 0px 3px 3px #555;
 }
 
 .Weather__sky {
-  font-size: 24px;
+  font-size: calc(16px + (10 * 0.75) *((100vw - 320px) / 1280));
   text-shadow: 0px 3px 3px #555;
+  margin: .5vh 0;
 }
 
 .Weather__temp {
-  font-size: 20px;
+  font-size: calc(16px + (10 * 0.75) *((100vw - 320px) / 1280));
 }
