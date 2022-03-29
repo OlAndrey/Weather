@@ -1,7 +1,10 @@
 import "./Title.css"
 import React from "react"
+import { useSelector } from "react-redux";
 
 function Title(props){
+    const city = useSelector(state => state.city);
+
     const days = {
         Mon: "Monday",
         Tue: "Tuesday",
@@ -35,7 +38,7 @@ function Title(props){
 
     return(
         <div className="Title">
-            <h1 className="Title__main">{props.city.name}, {props.city.country}</h1>
+            <h1 className="Title__main">{city.name}, {city.country}</h1>
             <p className="Title__subtitle">{date}</p>
         </div>
         
