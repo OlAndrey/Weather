@@ -7,7 +7,6 @@ function SearchItem(props){
     const { fetchWeatherDate } = useActions();
   
   
-  
     function click(city){
       SelectCity(city)
       fetchWeatherDate(city)
