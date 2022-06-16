@@ -1,22 +1,20 @@
+import { fetchAPI } from "../../API/FetchAPI"
 import { EMPTYLISTCITY, UPDATELISTCITY } from "../../types/cityList"
 
-export const UpdateListCity = (listCity) => {
+export const updateListCity = (listCity) => {
 	return {
 		type: UPDATELISTCITY,
 		listCity: listCity,
 	}
 }
 
-export const EmptyListCity = () => {
+export const emptyListCity = () => {
 	return {
 		type: EMPTYLISTCITY,
 	}
 }
 
-export function fetchListCity(value) {
-    return function(dispatch) {
-        return fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=9f34aadc54ee8673083896046d343a8a`)
-            .then(response => response.json())
-            .then(json => {dispatch(UpdateListCity(json))})
-    }
+export const fetchListCity = (value) => (dispatch) => {
+	return fetchAPI.fetchListCity(value)
+		.then(json => {dispatch(updateListCity(json))})
 }

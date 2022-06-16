@@ -1,45 +1,12 @@
 import "./Title.css"
 import React from "react"
-import { useSelector } from "react-redux";
 
-function Title(props){
-    const city = useSelector(state => state.city);
-
-    const days = {
-        Mon: "Monday",
-        Tue: "Tuesday",
-        Wed: "Wednesday",
-        Thu: "Thursday",
-        Fri: "Friday",
-        Sat: "Saturday",
-        Sun: "Sunday"
-    }
-    const months = {
-        Jan: "January",
-        Feb: "February",
-        Mar: "March",
-        Apr: "April",
-        May: "May",
-        Jun: "June",
-        Jul: "July",
-        Aug: "August",
-        Sep: "September",
-        Oct: "October",
-        Nov: "November",
-        Dec: "December",
-    }
-    let date = new Date().toDateString().split(" ");
-    let day = date[0];
-    let month = date[1];
-    date[0] = days[day];
-    date[1] = date[2];
-    date[2] = months[month];
-    date = date.join(" ");
+const Title = (props) => {
 
     return(
         <div className="Title">
-            <h1 className="Title__main">{city.name}, {city.country}</h1>
-            <p className="Title__subtitle">{date}</p>
+            <h1 className="Title__main">{props.name}, {props.country}</h1>
+            <p className="Title__subtitle">{props.date}</p>
         </div>
         
     )

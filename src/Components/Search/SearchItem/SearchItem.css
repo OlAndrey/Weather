@@ -47,6 +47,6 @@
     width: calc(50vw - 17px);
   }
   .item__block {
-    width: 50%;
+    width: 100%;
   }
 }

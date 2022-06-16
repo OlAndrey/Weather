@@ -1,1 +1,2 @@
 export const WEATHERUPDATE = "WEATHERUPDATE";
+export const FEACHING = "FEACHING";
