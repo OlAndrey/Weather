@@ -1,15 +1,15 @@
 import './App.css';
 import React from 'react';
-import SearchContainer from './Components/Search/SearchContainer';
-import WeatherWrapper from './Components/Weather/WetherContainer';
+import WeatherWrapper from './Components/Weather/WeatherContainer';
 import TitleWrapper from './Components/Title/TitleContainer';
+import SearchWrapper from './Components/Search/SearchContainer';
 
 
 const App = (props) => {
 
   return (
     <div className="App">
-      <SearchContainer />
+      <SearchWrapper />
       <TitleWrapper />
       <WeatherWrapper />
     </div>

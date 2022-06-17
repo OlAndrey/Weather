@@ -8,7 +8,7 @@ const WeatherContainer = (props) =>{
     useEffect(() =>{
         props.fetchWeatherDate(props.city.lat, props.city.lon);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    },[props.city])
     
     return (props.isFetching)
         ?<Preloader />

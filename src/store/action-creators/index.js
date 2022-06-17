@@ -1,9 +1,11 @@
 import * as cityActionCreators from './city';
-import * as cityListActionCreators from './cityList';
+import * as searchListActionCreators from './searchList';
 import * as weatherActionCreators from './weather';
+import * as weatherListActionCreators from './weatherList';
 
 export const actionCreators = {
-    ...cityListActionCreators,
+    ...searchListActionCreators,
 	...cityActionCreators,
 	...weatherActionCreators,
+	...weatherListActionCreators
 }

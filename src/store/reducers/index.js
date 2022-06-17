@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import { weatherReducer } from './weatherReducers';
 import { cityReducer } from './cityReducers';
-import { cityListReducer } from './cityListReducers';
+import { searchListReducer } from './searchListReducers';
+import { weatherListReducer } from './weatherListReducers';
 
 
 export const rootReducer = combineReducers({
-    cityList: cityListReducer,
+    searchList: searchListReducer,
     city: cityReducer,
+    weatherList: weatherListReducer,
     weather: weatherReducer
 });

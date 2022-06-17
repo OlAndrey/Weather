@@ -1,29 +1,39 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchListCity, emptyListCity } from "../../store/action-creators/cityList";
+import { fetchListCity, emptyListCity, updateSearchArea } from "../../store/action-creators/searchList";
+import { fetchWeatherListDate, emptyWeatherList } from "../../store/action-creators/weatherList";
 import { selectCity } from "../../store/action-creators/city";
-import { fetchWeatherDate } from "../../store/action-creators/weather";
 import Search from "./Search";
 import SearchItemContainer from "./SearchItem/SearchItemContainer";
 
+
 const SearchContainer = (props) =>{
+    function click(city = props.cityList[0]){
+        if(city){
+            props.selectCity(city)
+            props.updateSearchArea('')
+            props.emptyListCity()
+            props.emptyWeatherList()
+        }
+    }
 
     function handler(event){
         const value = event.target.value;
+        props.updateSearchArea(value);
         value.length >= 3
             ?props.fetchListCity(value)
             :props.emptyListCity()
     }
-
     
-    if(props.cityList[0]){
-        var items = Object.values(props.cityList).map((item, i) => <SearchItemContainer key={i} item={item} selectCity={props.selectCity} fetchWeatherDate={props.fetchWeatherDate} />);
-    }
-
     return <>
-            <Search handler={handler} />
+            <Search handler={handler} click={click} searchText={props.searchText} />
             <ul className="Search__list">
-                {items}
+                <SearchItemContainer 
+                    cityList={props.cityList} 
+                    weatherList={props.weatherList} 
+                    click={click}
+                    emptyWeatherList={props.emptyWeatherList}
+                    fetchWeatherListDate={props.fetchWeatherListDate} />
             </ul>
         </>
 }
@@ -31,10 +41,10 @@ const SearchContainer = (props) =>{
 
 const mapStateToProps = (state) =>{
     return {
-        cityList: state.cityList
+        searchText: state.searchList.searchArea,
+        cityList: state.searchList.listCity,
+        weatherList: state.weatherList
     }
 }
 
-const SearchWrapper = connect(mapStateToProps, {fetchListCity, emptyListCity, selectCity, fetchWeatherDate})(SearchContainer);
-
-export default SearchWrapper;
+export default connect(mapStateToProps, {fetchListCity, emptyListCity, selectCity, updateSearchArea, fetchWeatherListDate, emptyWeatherList})(SearchContainer);
